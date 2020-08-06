@@ -1,0 +1,25 @@
+plugins {
+    id "java"
+    id "application"
+}
+
+group = "io.github.xf8b.increaseanddecreasefield"
+version = "1.0.0"
+mainClassName = "io.github.xf8b.increaseanddecreasefield.Main"
+
+repositories {
+    mavenCentral()
+}
+
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'io.github.xf8b.increaseanddecreasefield.Main'
+        )
+    }
+}
+
+dependencies {
+    testCompile "junit:junit:4.12"
+    implementation "org.xerial:sqlite-jdbc:3.32.3.1"
+}
